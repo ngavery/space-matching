@@ -1,7 +1,13 @@
 import './App.css';
 import { useEffect, useState } from 'react';
+import { FaCog } from 'react-icons/fa';
+
+import Settings from './components/settings';
 import SingleCard from './components/singlecard';
+
 import successSfxFile from './sounds/success-sfx.mp3'
+import cardFlipSfx1File from './sounds/card-flip-sfx1.mp3'
+import cardFlipSfx2File from './sounds/card-flip-sfx2.mp3'
 
 const cardImages = [
     { "src": "/assets/blue-planet.png", matched: false },
@@ -23,6 +29,7 @@ function App() {
     const [card1, setCard1] = useState(null);
     const [card2, setCard2] = useState(null);
     const [disabled, setDisabled] = useState(false);
+    const [showSettings, setShowSettings] = useState(false);
 
     // New game: shuffle cards and reset turn counter
     const shuffleCards = () => {
@@ -39,6 +46,9 @@ function App() {
 
     // Handle card click
     const handleChoice = (card) => {
+        
+        const cardFlipSfx1 = new Audio(cardFlipSfx1File);
+        cardFlipSfx1.play();
         // If first card already picked, set second choice, else set first choice
         card1 ? setCard2(card) : setCard1(card)
     }
@@ -53,7 +63,7 @@ function App() {
 
                 const successSfx = new Audio(successSfxFile);
                 successSfx.play();
-                
+
                 setCards(prevCards => {
                     return prevCards.map(card => {
                         if (card.src === card1.src) {
@@ -77,6 +87,8 @@ function App() {
         setCard2(null)
         setTurns(prevTurns => prevTurns + 1) // Increment turn counter
         setDisabled(false)
+        const cardFlipSfx2 = new Audio(cardFlipSfx2File);
+        cardFlipSfx2.play();
     }
 
     // Automatically start game when first loaded
@@ -87,7 +99,18 @@ function App() {
     return(
         <div className="app-div">
             <h1> Space Matching</h1>
-            <button onClick={shuffleCards}>New Game</button>
+
+            <div className="settings-icon-div">
+                <a onClick={() => setShowSettings(true)} className="settings-btn">
+                    <FaCog />
+                </a>
+            </div>
+
+            <Settings 
+                show={showSettings} 
+                onClose={() => setShowSettings(false)} 
+                onNewGame={shuffleCards} 
+            />
 
             <div className="card-grid">
                 {cards.map((card) => (
