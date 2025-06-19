@@ -20,6 +20,7 @@ import earthPlanet from './img/earth-planet.png'
 import greenPlanet from './img/green-planet.png'
 import purplePlanet from './img/purple-planet.png'
 import redPlanet from './img/red-planet.png'
+import tieFighter from './img/tie-fighter.png'
 
 const cardImages = [
     { src: bluePlanet, matched: false },
@@ -195,7 +196,7 @@ function App() {
             
             </div>        
                 {gameComplete && !rocketLaunched && (
-                    <img src="/assets/tie-fighter.png"
+                    <img src={tieFighter}
                     className="rocket-fly"
                     alt="Rocket taking off"
                     onAnimationEnd={() => setRocketLaunched(true)}

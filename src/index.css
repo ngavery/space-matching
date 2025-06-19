@@ -25,18 +25,16 @@ h1 {
 
 }
 
+p {
+    font-family: 'Raleway', sans-serif;
+    color: white
+}
+
 @keyframes scrollBackground {
     from {
         background-position: 0;
     }
     to {
         background-position: 10000px;
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 36px;
-        max-width: 90vw;
     }
 }

@@ -10,7 +10,8 @@
 
 .start-screen-title {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    font-size: bold;
+    font-weight: bold;
+    font-size: 52px;
 }
 
 .start-game-btn {
@@ -34,5 +35,9 @@
     }
     .start-screen-p {
         font-size: 24px;
+    }
+    .start-screen-title {
+        font-size: 36px;
+        max-width: 90vw;
     }
 }

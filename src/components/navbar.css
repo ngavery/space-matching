@@ -8,10 +8,11 @@
     color: white;
 }
 
-.settings-title {
+.navbar-title {
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     font-style: italic;
+    font-size: 52px;
 }
 
 .settings-btn {
@@ -33,5 +34,10 @@
 @media (max-width: 768px) {
     .avery, .website {
         display: none;
+    }
+
+    .navbar-title {
+        font-size: 36px;
+        max-width: 90vw;
     }
 }
