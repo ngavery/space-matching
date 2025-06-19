@@ -1,19 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
+.navbar {
+    background: #000000;
+    background: linear-gradient(180deg,rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
 .navbar .container {
-    height: 10vh;
+    height: 12vh;
     color: white;
 }
 
 .navbar-title {
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 52px;
     color: white;
     text-align: center;
+    font-style: italic;
 }
 
 .settings-btn {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 28px;
+}
+
+.avery {
+    color: pink;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+.avery:hover {
+    color: #c29fa8;
 }

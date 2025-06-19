@@ -18,3 +18,8 @@ body {
         background-position: 10000px;
     }
 }
+
+:root {
+  --pink: #e46c9c;
+  --dark-pink: #b84472;
+}

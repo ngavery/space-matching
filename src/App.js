@@ -1,6 +1,5 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { FaCog } from 'react-icons/fa';
 
 // Components
 import Settings from './components/settings';
@@ -26,13 +25,14 @@ const cardImages = [
 
 function App() {
 
-    // Initialise variables
+    // Initialisation
     const [cards, setCards] = useState([])
     const [turns, setTurns] = useState(0)
     const [card1, setCard1] = useState(null);
     const [card2, setCard2] = useState(null);
     const [disabled, setDisabled] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
+    const [sfxEnabled, setSfxEnabled] = useState(true);
 
     // New game: shuffle cards and reset turn counter
     const shuffleCards = () => {
@@ -51,7 +51,9 @@ function App() {
     const handleChoice = (card) => {
         
         const cardFlipSfx1 = new Audio(cardFlipSfx1File);
-        cardFlipSfx1.play();
+        if (sfxEnabled) {
+            cardFlipSfx1.play();
+        }
         // If first card already picked, set second choice, else set first choice
         card1 ? setCard2(card) : setCard1(card)
     }
@@ -65,7 +67,9 @@ function App() {
                 console.log('cards match')
 
                 const successSfx = new Audio(successSfxFile);
-                successSfx.play();
+                if (sfxEnabled) {
+                    successSfx.play();
+                }
 
                 setCards(prevCards => {
                     return prevCards.map(card => {
@@ -91,13 +95,18 @@ function App() {
         setTurns(prevTurns => prevTurns + 1) // Increment turn counter
         setDisabled(false)
         const cardFlipSfx2 = new Audio(cardFlipSfx2File);
-        cardFlipSfx2.play();
+        if (sfxEnabled) {
+            cardFlipSfx2.play();
+        }
     }
 
     // Automatically start game when first loaded
     useEffect(() => {
         shuffleCards()
     }, [])
+
+    // Toggle SFX
+    const toggleSfx = () => setSfxEnabled(prev => !prev);
 
     return(
         <>
@@ -107,7 +116,9 @@ function App() {
                 <Settings 
                     show={showSettings} 
                     onClose={() => setShowSettings(false)} 
-                    onNewGame={shuffleCards} 
+                    onNewGame={shuffleCards}
+                    sfxEnabled={sfxEnabled}
+                    toggleSfx={toggleSfx}
                 />
 
                 <div className="card-grid">
