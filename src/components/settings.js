@@ -20,11 +20,11 @@ function Settings({ show, onClose, onNewGame, sfxEnabled, toggleSfx, toggleGameC
                 />
                 </Form>
 
-                {/*For development purposes
+                {/*For development purposes                */}
                 <a variant="primary" onClick={toggleGameComplete}>
                     Toggle Game Complete
                 </a>
-                */}
+
                 
             </Modal.Body>
 

@@ -44,9 +44,12 @@
 
 @media (max-width: 768px) {
     .card-grid {
+        grid-template-columns: repeat(3, 1fr);
         gap: 8px;
     }
-
+    .turn-counter {
+        font-size: 24px;
+    }
     .website-footer {
         display: flex;
         justify-content: center;
@@ -67,4 +70,8 @@
     .rocket-fly {
         animation: fly-across 1s linear forwards;
     }
+    @keyframes fly-across {
+    from { left: -12vw; }
+    to { left: 100vw; }
+}
 }

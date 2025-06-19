@@ -15,6 +15,12 @@ body {
     animation: scrollBackground 1000s linear infinite;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
