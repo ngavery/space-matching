@@ -1,12 +1,12 @@
 import { Navbar, Nav, Container} from 'react-bootstrap';
-import { FaCog } from 'react-icons/fa';
+import { FaCog, FaBars } from 'react-icons/fa';
 import './navbar.css';
 
 function NavBar({onSettingsClick}) {
     return(
         <Navbar expand="lg" className="">
             <Container className="d-flex justify-content-between align-items-center position-relative">
-                <FaCog onClick={onSettingsClick} className="settings-btn"/>
+                <FaBars onClick={onSettingsClick} className="settings-btn"/>
                 
                 <h1 className="m-0 position-absolute start-50 translate-middle-x text-white navbar-title">
                     Space Matching

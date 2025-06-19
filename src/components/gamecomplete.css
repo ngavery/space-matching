@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.game-complete-modal {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 18px;
+}
+
+.btn-close {
+    filter: invert(1);
+    font-size: 16px;
+}
+
+.btn-close:focus,
+.btn-close:active {
+  box-shadow: none;
+  outline: none;
+}
+
+.rocket-icon {
+    margin-left: 10px;
+}
+
+.game-complete-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 36px;
+}
+
+.play-again-btn {
+    background-color: var(--pink);
+    border: var(--pink);
+}
+
+.play-again-btn:hover {
+    background-color: var(--dark-pink);
+}

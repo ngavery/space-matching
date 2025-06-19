@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Settings from './components/settings';
 import SingleCard from './components/singlecard';
 import NavBar from './components/navbar';
+import GameCompleteModal from './components/gamecomplete';
 
 // Sound effects
 import successSfxFile from './sounds/success-sfx.mp3'
@@ -33,6 +34,8 @@ function App() {
     const [disabled, setDisabled] = useState(false);
     const [showSettings, setShowSettings] = useState(false);
     const [sfxEnabled, setSfxEnabled] = useState(true);
+    const [gameComplete, setGameComplete] = useState(false);
+    const [rocketLaunched, setRocketLaunched] = useState(false);
 
     // New game: shuffle cards and reset turn counter
     const shuffleCards = () => {
@@ -45,6 +48,8 @@ function App() {
         setCard2(null)
         setCards(shuffledCards)
         setTurns(0)
+        setGameComplete(false)
+        setRocketLaunched(false)
     }
 
     // Handle card click
@@ -60,26 +65,33 @@ function App() {
 
     // Compare two cards
     useEffect(() => {
-        if (card1 && card2) {
-            setDisabled(true)
+    if (card1 && card2) {
+        setDisabled(true);
 
-            if (card1.src === card2.src) { // If cards match
-                console.log('cards match')
+        if (card1.src === card2.src) {
+            console.log('cards match');
 
-                const successSfx = new Audio(successSfxFile);
-                if (sfxEnabled) {
-                    successSfx.play();
+            if (sfxEnabled) {
+                new Audio(successSfxFile).play();
+            }
+
+            setCards(prevCards => {
+                const updatedCards = prevCards.map(card => {
+                    if (card.src === card1.src) {
+                        return { ...card, matched: true };
+                    } else {
+                        return card;
+                    }
+                });
+
+                const allMatched = updatedCards.every(card => card.matched);
+                if (allMatched) {
+                    setTimeout(() => setGameComplete(true), 600);
                 }
 
-                setCards(prevCards => {
-                    return prevCards.map(card => {
-                        if (card.src === card1.src) {
-                            return { ...card, matched: true } // Return new card with same src but matched as true
-                        } else {
-                            return card
-                        }
-                    })
-                })
+                return updatedCards;
+            });
+
                 resetTurn()
             } else { // If cards don't match
                 console.log('cards do not match')
@@ -108,6 +120,9 @@ function App() {
     // Toggle SFX
     const toggleSfx = () => setSfxEnabled(prev => !prev);
 
+    // FOR DEVELOPMENT: Toggle game complete
+    const toggleGameComplete = () => setGameComplete(prev => !prev);
+
     return(
         <>
             <NavBar onSettingsClick={() => setShowSettings(true)}/>
@@ -119,6 +134,16 @@ function App() {
                     onNewGame={shuffleCards}
                     sfxEnabled={sfxEnabled}
                     toggleSfx={toggleSfx}
+                    toggleGameComplete={toggleGameComplete}
+                />
+
+                <GameCompleteModal
+                    show={gameComplete}
+                    onClose={() => setGameComplete(false)}
+                    onNewGame={() => {
+                        shuffleCards();
+                        setGameComplete(false);
+                    }}
                 />
 
                 <div className="card-grid">
@@ -134,6 +159,14 @@ function App() {
                 </div>
                 <p className="turn-counter">Turns: {turns} </p>
             </div>
+                    
+            {gameComplete && !rocketLaunched && (
+                <img src="/assets/tie-fighter.png"
+                className="rocket-fly"
+                alt="Rocket taking off"
+                onAnimationEnd={() => setRocketLaunched(true)}
+            />
+            )}
         </>
 
     );

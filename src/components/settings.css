@@ -1,5 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/*FOR ALL MODALS*/
+.modal-backdrop.show {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.settings-modal {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 18px;
+}
+
+.btn-close {
+    filter: invert(1);
+    font-size: 16px;
+}
+
+.btn-close:focus,
+.btn-close:active {
+  box-shadow: none;
+  outline: none;
+}
+
 .settings-title {
-    color: black;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 36px;
 }
 
 .save-btn {

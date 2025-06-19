@@ -19,3 +19,21 @@
     width: fit-content;
     max-width: 95vw;
 }
+
+.turn-counter {
+    font-family: 'Raleway', sans-serif;
+}
+
+.rocket-fly {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100px;
+    height: auto;
+    animation: fly-across 2s linear forwards;
+}
+
+@keyframes fly-across {
+    from { left: 0; }
+    to { left: 100vw; }
+}
