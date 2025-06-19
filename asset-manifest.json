@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/space-matching/static/css/main.83168ea3.css",
-    "main.js": "/space-matching/static/js/main.5d6dc3be.js",
+    "main.css": "/space-matching/static/css/main.5034322e.css",
+    "main.js": "/space-matching/static/js/main.eb3318a7.js",
     "static/media/space-background-edited.png": "/space-matching/static/media/space-background-edited.8410e8e364969388e8d6.png",
+    "static/media/tie-fighter.png": "/space-matching/static/media/tie-fighter.f003cb44f484d5f89a77.png",
     "static/media/rock-texture.png": "/space-matching/static/media/rock-texture.83b805c1c72fcc833a3e.png",
     "static/media/brown-planet.png": "/space-matching/static/media/brown-planet.10a779d52cfeadd0ba92.png",
     "static/media/blue-planet.png": "/space-matching/static/media/blue-planet.30a3259b15c7b80597a2.png",
@@ -14,11 +15,11 @@
     "static/media/card-flip-sfx1.mp3": "/space-matching/static/media/card-flip-sfx1.817eda518ddd65fe6357.mp3",
     "static/media/card-flip-sfx2.mp3": "/space-matching/static/media/card-flip-sfx2.e62cdd2e290f4fcbbd75.mp3",
     "index.html": "/space-matching/index.html",
-    "main.83168ea3.css.map": "/space-matching/static/css/main.83168ea3.css.map",
-    "main.5d6dc3be.js.map": "/space-matching/static/js/main.5d6dc3be.js.map"
+    "main.5034322e.css.map": "/space-matching/static/css/main.5034322e.css.map",
+    "main.eb3318a7.js.map": "/space-matching/static/js/main.eb3318a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.83168ea3.css",
-    "static/js/main.5d6dc3be.js"
+    "static/css/main.5034322e.css",
+    "static/js/main.eb3318a7.js"
   ]
 }
