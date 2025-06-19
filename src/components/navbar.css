@@ -8,6 +8,12 @@
     color: white;
 }
 
+.settings-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
 .settings-btn {
     cursor: pointer;
     font-size: 28px;

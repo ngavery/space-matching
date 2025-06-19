@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: Raleway, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 18px;
     background: url('./img/space-background-edited.png');
     background-size: cover;
@@ -21,7 +21,7 @@ h1 {
     font-size: 52px;
     color: white;
     font-style: italic;
-        text-align: center;
+    text-align: center;
 
 }
 

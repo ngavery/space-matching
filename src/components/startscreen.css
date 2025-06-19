@@ -10,12 +10,14 @@
 
 .start-screen-title {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: bold;
 }
 
 .start-game-btn {
     background-color: var(--pink);
     border: var(--pink);
     font-size: 24px;
+    font-family: 'Raleway', sans-serif;
 }
 
 .start-game-btn:hover {

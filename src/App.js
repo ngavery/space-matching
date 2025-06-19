@@ -13,13 +13,21 @@ import successSfxFile from './sounds/success-sfx.mp3'
 import cardFlipSfx1File from './sounds/card-flip-sfx1.mp3'
 import cardFlipSfx2File from './sounds/card-flip-sfx2.mp3'
 
+// images 
+import bluePlanet from './img/blue-planet.png'
+import brownPlanet from './img/brown-planet.png'
+import earthPlanet from './img/earth-planet.png'
+import greenPlanet from './img/green-planet.png'
+import purplePlanet from './img/purple-planet.png'
+import redPlanet from './img/red-planet.png'
+
 const cardImages = [
-    { "src": "/assets/blue-planet.png", matched: false },
-    { "src": "/assets/brown-planet.png", matched: false },
-    { "src": "/assets/earth-planet.png", matched: false },
-    { "src": "/assets/green-planet.png", matched: false },
-    { "src": "/assets/purple-planet.png", matched: false },
-    { "src": "/assets/red-planet.png", matched: false },
+    { src: bluePlanet, matched: false },
+    { src: brownPlanet, matched: false },
+    { src: earthPlanet, matched: false },
+    { src: greenPlanet, matched: false },
+    { src: purplePlanet, matched: false },
+    { src: redPlanet, matched: false },
     // { "src": "/assets/red-planet2.png", matched: false },
     // { "src": "/assets/ring-planet.png", matched: false },
     // { "src": "/assets/yellow-planet.png", matched: false },
