@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/space-matching/static/css/main.45a6782a.css",
+    "main.js": "/space-matching/static/js/main.147e01af.js",
+    "static/media/space-background-edited.png": "/space-matching/static/media/space-background-edited.8410e8e364969388e8d6.png",
+    "static/media/success-sfx.mp3": "/space-matching/static/media/success-sfx.817e7ca7bcb38c415337.mp3",
+    "static/media/card-flip-sfx1.mp3": "/space-matching/static/media/card-flip-sfx1.817eda518ddd65fe6357.mp3",
+    "static/media/card-flip-sfx2.mp3": "/space-matching/static/media/card-flip-sfx2.e62cdd2e290f4fcbbd75.mp3",
+    "index.html": "/space-matching/index.html",
+    "main.45a6782a.css.map": "/space-matching/static/css/main.45a6782a.css.map",
+    "main.147e01af.js.map": "/space-matching/static/js/main.147e01af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45a6782a.css",
+    "static/js/main.147e01af.js"
+  ]
+}
