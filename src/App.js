@@ -2,9 +2,12 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { FaCog } from 'react-icons/fa';
 
+// Components
 import Settings from './components/settings';
 import SingleCard from './components/singlecard';
+import NavBar from './components/navbar';
 
+// Sound effects
 import successSfxFile from './sounds/success-sfx.mp3'
 import cardFlipSfx1File from './sounds/card-flip-sfx1.mp3'
 import cardFlipSfx2File from './sounds/card-flip-sfx2.mp3'
@@ -97,34 +100,31 @@ function App() {
     }, [])
 
     return(
-        <div className="app-div">
-            <h1> Space Matching</h1>
+        <>
+            <NavBar onSettingsClick={() => setShowSettings(true)}/>
+            <div className="app-div">
 
-            <div className="settings-icon-div">
-                <a onClick={() => setShowSettings(true)} className="settings-btn">
-                    <FaCog />
-                </a>
+                <Settings 
+                    show={showSettings} 
+                    onClose={() => setShowSettings(false)} 
+                    onNewGame={shuffleCards} 
+                />
+
+                <div className="card-grid">
+                    {cards.map((card) => (
+                        <SingleCard 
+                        key={card.id}
+                        card={card} 
+                        handleChoice={handleChoice} 
+                        flipped={card === card1 || card === card2 || card.matched} // Flipped is true if user clicks on card or if card has been matched
+                        disabled={disabled}
+                        />
+                    ))}
+                </div>
+                <p className="turn-counter">Turns: {turns} </p>
             </div>
+        </>
 
-            <Settings 
-                show={showSettings} 
-                onClose={() => setShowSettings(false)} 
-                onNewGame={shuffleCards} 
-            />
-
-            <div className="card-grid">
-                {cards.map((card) => (
-                    <SingleCard 
-                    key={card.id}
-                    card={card} 
-                    handleChoice={handleChoice} 
-                    flipped={card === card1 || card === card2 || card.matched} // Flipped is true if user clicks on card or if card has been matched
-                    disabled={disabled}
-                    />
-                ))}
-            </div>
-            <p>Turns: {turns} </p>
-        </div>
     );
 }
 

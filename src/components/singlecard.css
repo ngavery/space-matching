@@ -1,13 +1,19 @@
+/*singlecard.css*/
+
 .card {
     position: relative;
+    aspect-ratio: 1 / 1;
+    width: 180px;
+    max-width: 20vw;
 }
 
 .card img {
-    width: 180px;
-    max-width: 20vw;
     border-radius: 8px;
     border: solid white 3px;
     display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card .card-front {

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.navbar .container {
+    height: 10vh;
+    color: white;
+}
+
+.navbar-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+}
+
+.settings-btn {
+    cursor: pointer;
+    font-size: 24px;
+}

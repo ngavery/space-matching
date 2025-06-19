@@ -2,10 +2,19 @@
 
 body {
     font-family: Raleway, sans-serif;
-    margin: 0;
     font-size: 1.5em;
     text-align: center;
-    background: url('./img/space-background.jpg') no-repeat center center fixed;
+    background: url('./img/space-background-edited.png');
     background-size: cover;
     color: white;
+    animation: scrollBackground 1000s linear infinite;
+}
+
+@keyframes scrollBackground {
+    from {
+        background-position: 0;
+    }
+    to {
+        background-position: 10000px;
+    }
 }
