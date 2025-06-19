@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/space-matching/static/css/main.5152b988.css",
+    "main.css": "/space-matching/static/css/main.d99bc9d7.css",
     "main.js": "/space-matching/static/js/main.e06a4c62.js",
     "static/media/space-background-edited.png": "/space-matching/static/media/space-background-edited.8410e8e364969388e8d6.png",
     "static/media/tie-fighter.png": "/space-matching/static/media/tie-fighter.f003cb44f484d5f89a77.png",
@@ -15,11 +15,11 @@
     "static/media/card-flip-sfx1.mp3": "/space-matching/static/media/card-flip-sfx1.817eda518ddd65fe6357.mp3",
     "static/media/card-flip-sfx2.mp3": "/space-matching/static/media/card-flip-sfx2.e62cdd2e290f4fcbbd75.mp3",
     "index.html": "/space-matching/index.html",
-    "main.5152b988.css.map": "/space-matching/static/css/main.5152b988.css.map",
+    "main.d99bc9d7.css.map": "/space-matching/static/css/main.d99bc9d7.css.map",
     "main.e06a4c62.js.map": "/space-matching/static/js/main.e06a4c62.js.map"
   },
   "entrypoints": [
-    "static/css/main.5152b988.css",
+    "static/css/main.d99bc9d7.css",
     "static/js/main.e06a4c62.js"
   ]
 }
