@@ -3,7 +3,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 85vh;
+    height: calc(100dvh - 12vh);
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .turn-counter {
