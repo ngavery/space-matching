@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/space-matching/static/css/main.45a6782a.css",
-    "main.js": "/space-matching/static/js/main.147e01af.js",
+    "main.css": "/space-matching/static/css/main.83168ea3.css",
+    "main.js": "/space-matching/static/js/main.5d6dc3be.js",
     "static/media/space-background-edited.png": "/space-matching/static/media/space-background-edited.8410e8e364969388e8d6.png",
+    "static/media/rock-texture.png": "/space-matching/static/media/rock-texture.83b805c1c72fcc833a3e.png",
+    "static/media/brown-planet.png": "/space-matching/static/media/brown-planet.10a779d52cfeadd0ba92.png",
+    "static/media/blue-planet.png": "/space-matching/static/media/blue-planet.30a3259b15c7b80597a2.png",
+    "static/media/green-planet.png": "/space-matching/static/media/green-planet.225f734a90dd3bcf62cb.png",
+    "static/media/red-planet.png": "/space-matching/static/media/red-planet.75776f2c4aa6bda10a61.png",
+    "static/media/earth-planet.png": "/space-matching/static/media/earth-planet.9d33839b26d0b0df3356.png",
+    "static/media/purple-planet.png": "/space-matching/static/media/purple-planet.e3e03eb7d89ec841c29f.png",
     "static/media/success-sfx.mp3": "/space-matching/static/media/success-sfx.817e7ca7bcb38c415337.mp3",
     "static/media/card-flip-sfx1.mp3": "/space-matching/static/media/card-flip-sfx1.817eda518ddd65fe6357.mp3",
     "static/media/card-flip-sfx2.mp3": "/space-matching/static/media/card-flip-sfx2.e62cdd2e290f4fcbbd75.mp3",
     "index.html": "/space-matching/index.html",
-    "main.45a6782a.css.map": "/space-matching/static/css/main.45a6782a.css.map",
-    "main.147e01af.js.map": "/space-matching/static/js/main.147e01af.js.map"
+    "main.83168ea3.css.map": "/space-matching/static/css/main.83168ea3.css.map",
+    "main.5d6dc3be.js.map": "/space-matching/static/js/main.5d6dc3be.js.map"
   },
   "entrypoints": [
-    "static/css/main.45a6782a.css",
-    "static/js/main.147e01af.js"
+    "static/css/main.83168ea3.css",
+    "static/js/main.5d6dc3be.js"
   ]
 }
