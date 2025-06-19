@@ -1,0 +1,36 @@
+.start-screen-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    gap: 40px;
+    margin-bottom: 10vh;
+}
+
+.start-screen-title {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.start-game-btn {
+    background-color: var(--pink);
+    border: var(--pink);
+    font-size: 24px;
+}
+
+.start-game-btn:hover {
+    background-color: var(--dark-pink) !important;
+}
+
+.start-screen-p {
+    font-size: 36px;
+}
+
+@media (max-width: 768px) {
+    .start-game-btn {
+        font-size: 18px;
+    }
+    .start-screen-p {
+        font-size: 24px;
+    }
+}

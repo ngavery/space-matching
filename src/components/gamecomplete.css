@@ -4,6 +4,7 @@
     background-color: rgb(24, 24, 24);
     color: white;
     font-size: 18px;
+    max-width: 90vw;
 }
 
 .btn-close {

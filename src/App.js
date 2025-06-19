@@ -6,6 +6,7 @@ import Settings from './components/settings';
 import SingleCard from './components/singlecard';
 import NavBar from './components/navbar';
 import GameCompleteModal from './components/gamecomplete';
+import StartScreen from './components/startscreen';
 
 // Sound effects
 import successSfxFile from './sounds/success-sfx.mp3'
@@ -26,7 +27,7 @@ const cardImages = [
 
 function App() {
 
-    // Initialisation
+    // UseState initialisation
     const [cards, setCards] = useState([])
     const [turns, setTurns] = useState(0)
     const [card1, setCard1] = useState(null);
@@ -36,6 +37,8 @@ function App() {
     const [sfxEnabled, setSfxEnabled] = useState(true);
     const [gameComplete, setGameComplete] = useState(false);
     const [rocketLaunched, setRocketLaunched] = useState(false);
+    const [showStartScreen, setShowStartScreen] = useState(true);
+    const [showCards, setShowCards] = useState(false);
 
     // New game: shuffle cards and reset turn counter
     const shuffleCards = () => {
@@ -50,7 +53,15 @@ function App() {
         setTurns(0)
         setGameComplete(false)
         setRocketLaunched(false)
+        setShowStartScreen(true)
+        setShowCards(false)
     }
+
+    const startGame = () => {
+        shuffleCards();
+        setShowStartScreen(false);
+        setShowCards(true);
+    };
 
     // Handle card click
     const handleChoice = (card) => {
@@ -146,25 +157,40 @@ function App() {
                     }}
                 />
 
-                <div className="card-grid">
+                {showStartScreen &&
+                    <StartScreen
+                        onNewGame={startGame}
+                    />
+                }
+                
+                {showCards && (
+                <>
+                    <div className="card-grid">
                     {cards.map((card) => (
                         <SingleCard 
                         key={card.id}
                         card={card} 
                         handleChoice={handleChoice} 
-                        flipped={card === card1 || card === card2 || card.matched} // Flipped is true if user clicks on card or if card has been matched
+                        flipped={card === card1 || card === card2 || card.matched}
                         disabled={disabled}
                         />
                     ))}
+                    </div>
+                    <p className="turn-counter">Turns: {turns}</p>
+                </>
+                )}
+                <div className="website-footer">
+                    <p className="website1"> Website by
+                        <a className="avery1" href="https://ngavery.github.io/averyng.github.io/" target="_blank" rel="noopener noreferrer"> Avery Ng </a>
+                    </p>
                 </div>
-                <p className="turn-counter">Turns: {turns} </p>
-            </div>
-                    
-            {gameComplete && !rocketLaunched && (
-                <img src="/assets/tie-fighter.png"
-                className="rocket-fly"
-                alt="Rocket taking off"
-                onAnimationEnd={() => setRocketLaunched(true)}
+            
+            </div>        
+                {gameComplete && !rocketLaunched && (
+                    <img src="/assets/tie-fighter.png"
+                    className="rocket-fly"
+                    alt="Rocket taking off"
+                    onAnimationEnd={() => setRocketLaunched(true)}
             />
             )}
         </>
@@ -173,3 +199,5 @@ function App() {
 }
 
 export default App;
+
+

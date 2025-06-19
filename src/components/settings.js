@@ -20,15 +20,17 @@ function Settings({ show, onClose, onNewGame, sfxEnabled, toggleSfx, toggleGameC
                 />
                 </Form>
 
-                {/*For development purposes*/}
+                {/*For development purposes
                 <a variant="primary" onClick={toggleGameComplete}>
                     Toggle Game Complete
                 </a>
+                */}
+                
             </Modal.Body>
 
             <Modal.Footer>
                 <Button variant="secondary" onClick={() => { onClose(); onNewGame(); }} className="new-game-btn">
-                    Start a New Game
+                    Start New Game
                     <BsRocketTakeoffFill className="rocket-icon"/>
                 </Button>
                 <Button className="save-btn" variant="primary" onClick={onClose}>

@@ -9,6 +9,13 @@
     background-color: rgb(24, 24, 24);
     color: white;
     font-size: 18px;
+    max-width: 90vw;
+}
+
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-close {
@@ -27,6 +34,16 @@
     font-weight: bold;
     font-style: italic;
     font-size: 36px;
+}
+
+#custom-switch.form-check-input:checked {
+    background-color: var(--pink);
+    border-color: var(--pink);
+}
+
+#custom-switch:focus {
+    box-shadow: none;;
+    outline: none;
 }
 
 .save-btn {

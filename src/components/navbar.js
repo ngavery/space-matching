@@ -12,7 +12,7 @@ function NavBar({onSettingsClick}) {
                     Space Matching
                 </h1>
                 
-                <p className="m-0"> Website by
+                <p className="m-0 website"> Website by
                     <a className="avery" href="https://ngavery.github.io/averyng.github.io/" target="_blank" rel="noopener noreferrer"> Avery Ng </a>
                 </p>
 

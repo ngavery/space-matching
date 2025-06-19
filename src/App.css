@@ -33,7 +33,38 @@
     animation: fly-across 2s linear forwards;
 }
 
+.website-footer {
+    display: none;
+}
+
 @keyframes fly-across {
     from { left: 0; }
     to { left: 100vw; }
+}
+
+@media (max-width: 768px) {
+    .card-grid {
+        gap: 8px;
+    }
+
+    .website-footer {
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .avery1 {
+        color: var(--pink);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .avery1:hover {
+        color: var(--dark-pink);
+    }
+
+    .rocket-fly {
+        animation: fly-across 1s linear forwards;
+    }
 }

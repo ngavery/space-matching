@@ -1,13 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+  --pink: #e46c9c;
+  --dark-pink: #c75280;
+}
 
 body {
     font-family: Raleway, sans-serif;
-    font-size: 1.5em;
-    text-align: center;
+    font-size: 18px;
     background: url('./img/space-background-edited.png');
     background-size: cover;
     color: white;
     animation: scrollBackground 1000s linear infinite;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 52px;
+    color: white;
+    font-style: italic;
+        text-align: center;
+
 }
 
 @keyframes scrollBackground {
@@ -19,7 +34,9 @@ body {
     }
 }
 
-:root {
-  --pink: #e46c9c;
-  --dark-pink: #b84472;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+        max-width: 90vw;
+    }
 }
