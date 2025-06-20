@@ -10,7 +10,7 @@ function StartScreen ({ onNewGame }) {
             <Button className="start-game-btn" onClick={() => {
                 onNewGame();
             }}>
-            Play Now
+            Play
             <BsRocketTakeoffFill className="rocket-icon"/>
             </Button>
         </div>
